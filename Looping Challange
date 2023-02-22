@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.8;
+
+
+contract Loop_challange {
+    uint public max = 10;
+    function small_loop() public {
+        for(uint i; i < 1000; i++) {
+            max = max + i;
+        }
+    }
+    function Big_loop() public  {
+        for(uint n = 1; n < 100; n++) {
+            max = max ** n;
+        }
+    }
+}
+
+// Reason for the error is because we runs out of gas
